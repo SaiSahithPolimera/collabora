@@ -1,0 +1,70 @@
+.list-div {
+    display: flex;
+    flex-direction: column;
+
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(181, 181, 181);
+    align-items: center;
+    font-size: 18px;
+}
+.my-list {
+    display: flex;
+    list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    padding: 22px 22px;
+}
+
+a:hover {
+    color: rgb(129, 130, 132);
+}
+
+.hero-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.half {
+    flex: 1;
+}
+
+.signup-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 160px;
+    padding: 40px 30px;
+    background-color: rgba(167, 167, 167, 0.773);
+    border-radius: 10px;
+}
+
+.back-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sign-with-google {
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.sign-with-google :hover {
+    background-color: rgb(255, 255, 255);
+}
