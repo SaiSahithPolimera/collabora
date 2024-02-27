@@ -6,3 +6,17 @@
   margin: 0;
   padding: 0;
 }
+
+textarea {
+  resize: none;
+}
+
+label,input {
+  display: inline-block;
+}
+
+label {
+  font-size: 24px;
+  padding: 10px;
+
+}
