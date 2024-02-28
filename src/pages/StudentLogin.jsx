@@ -12,6 +12,30 @@ const StudentLogin = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
+
+        const user = result.user;
+
+        fetch("http://localhost:3000/student/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: user.email,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            const userId = data.newStudent._id;
+            localStorage.setItem("collaboraUserId", userId);
+          })
+          .then(() => {
+            window.location.href = "/createProposal";
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error);

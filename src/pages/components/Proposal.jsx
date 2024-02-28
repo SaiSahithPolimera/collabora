@@ -5,12 +5,14 @@ import Header from "./Header";
 const Proposal = () => {
 
   const [form, setForm] = useState({
+    studentId : localStorage.getItem('collaboraUserId'),
     title: '',
     description: '',
     name: '',
     skills: [],
     facultyName: '',
-    facultyDepartment: ''
+    facultyDepartment: '',
+    email : ''
   });
 
   const [skillInput, setSkillInput] = useState('');
@@ -38,6 +40,21 @@ const Proposal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+
+    fetch("http://localhost:3000/student/createProposal", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   function removeSkill(index) {
@@ -62,7 +79,7 @@ const Proposal = () => {
         <textarea placeholder="Description" className="description" name="description" value={form.description} onChange={handleChange} required />
       </div>
       <div className="proposal">
-        <label>Project Name: </label>
+        <label>Student Name: </label>
         <input type="text" placeholder="Name" name="name" value={form.name} onChange={handleChange} required />
       </div>
       <div className="proposal">
@@ -78,6 +95,10 @@ const Proposal = () => {
       <div className="proposal">
         <label>Faculty Name: </label>
         <input type="text" placeholder="Faculty Name" name="facultyName" value={form.facultyName} onChange={handleChange} required />
+      </div>
+      <div className="proposal">
+        <label>Faculty Email: </label>
+        <input type="text" placeholder="Faculty email" name="email" value={form.email} onChange={handleChange} required />
       </div>
       <div className="proposal">
         <label>Faculty Department: </label>

@@ -17,12 +17,38 @@ const StudentSignup = () => {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
+
+        fetch("http://localhost:3000/student/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: user.displayName,
+            email: user.email,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            const userId = data._id;
+            localStorage.setItem("collaboraUserId", userId);
+          })
+          .then(() => {
+            window.location.href = "/createProposal";
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+          
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         const email = error.email;
         const credential = GoogleAuthProvider.credentialFromError(error);
+
+        console.log(errorCode, errorMessage, email, credential);
       });
   };
   return (
