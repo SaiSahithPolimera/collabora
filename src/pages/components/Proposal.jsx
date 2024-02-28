@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Proposal.css";
+import '../../Styles/Proposal.css';
 import Header from "./Header";
 
 const Proposal = () => {
