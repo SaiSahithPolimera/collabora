@@ -3,11 +3,11 @@
   flex-direction: column;
 }
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(181, 181, 181);
-  align-items: center;
-  font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fbfbfb;
+    align-items: center;
+    font-size: 18px;
 }
 .my-list {
   display: flex;
@@ -23,7 +23,7 @@ li {
 }
 
 a:hover {
-  color: rgb(129, 130, 132);
+    color: rgb(0, 68, 203);
 }
 
 .hero-div {
