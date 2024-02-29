@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import '../../Styles/auth.css'
 import teacherImg from '../../assets/teacher.png'
 import studentImg from '../../assets/student.png'
+import Footer from "../Footer";
 
 const Signup = () => {
   return (
@@ -20,8 +21,8 @@ const Signup = () => {
           <img src={studentImg} alt="Student icon" />
           <a href="/student/signup">Continue as Student</a>
         </div>
-
       </div>
+      <Footer />
     </>
   );
 };

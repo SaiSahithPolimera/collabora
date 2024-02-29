@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import facultyImg from "../assets/teacher.png";
 import googleImg from "../assets/google.png";
-
+import Footer from "./Footer";
 import {app} from "../firebase/config";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
@@ -45,6 +45,7 @@ const FacultySignup = () => {
           <a href="/faculty/login">Login</a>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import facultyImg from "../assets/teacher.png";
 import googleImg from "../assets/google.png";
-
 import { app } from "../firebase/config";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import Footer from "./Footer";
 
 const FacultyLogin = () => {
   const auth = getAuth(app);
@@ -43,6 +43,7 @@ const FacultyLogin = () => {
           </div>{" "}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

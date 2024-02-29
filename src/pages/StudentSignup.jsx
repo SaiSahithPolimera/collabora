@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import studentImg from "../assets/student.png";
 import googleImg from "../assets/google.png";
-
+import Footer from "./Footer";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../firebase/config";
 
@@ -74,6 +74,7 @@ const StudentSignup = () => {
           </div>{" "}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

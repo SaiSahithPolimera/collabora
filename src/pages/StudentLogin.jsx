@@ -3,6 +3,7 @@ import studentImg from "../assets/student.png";
 import googleImg from "../assets/google.png";
 import { app } from "../firebase/config";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import Footer from "./Footer";
 
 const StudentLogin = () => {
   const auth = getAuth(app);
@@ -65,6 +66,7 @@ const StudentLogin = () => {
           </div>{" "}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

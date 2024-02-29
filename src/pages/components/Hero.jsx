@@ -18,6 +18,9 @@ const Hero = () => {
             <p className="hilight">Start exploring today and dive into a world of learning and creativity</p>
           </p>
         </div>
+        <button className='Get-Started' onClick={() => {
+          window.location.href = '/student/signup';
+        }}>Get Started</button>
       </div>
       <div className="half">
         <div className="hero-faculty">
@@ -34,6 +37,9 @@ const Hero = () => {
             <p className="hilight">Start exploring today and dive into a world of learning and creativity</p>
           </p>
         </div>
+      <button className='Get-Started' onClick={() => {
+        window.location.href = '/faculty/signup';
+      }}>Get Started</button>
       </div>
     </div>
   );

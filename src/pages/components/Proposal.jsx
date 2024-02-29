@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../../Styles/Proposal.css';
 import Header from "./Header";
+import Footer from "../Footer";
 
 const Proposal = () => {
 
@@ -108,6 +109,7 @@ const Proposal = () => {
         <button className="proposal--submit" type="submit">Submit</button>
       </div>
     </form>
+    <Footer/>
     </>
   );
 };

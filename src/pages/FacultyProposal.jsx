@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../Styles/FacultyProposals.css'
 import Header from './components/Header'
 import { FaCheck } from 'react-icons/fa'
+import Footer from './Footer'
 
 const FacultyProposal = () => {
   const proposals = Array(5).fill({ title: 'Proposal Title', name: 'Name', branch: 'Branch', description: 'Proposal Description', skills: ["C", 'React JS'] });
@@ -53,6 +54,7 @@ const FacultyProposal = () => {
         </div>
       </div>
     )}
+    <Footer/>
     </>
   )
 }
